@@ -1,0 +1,10 @@
+.portfolio { background: var(--vinho-escuro); color: var(--bege); padding-left: 0; padding-right: 0; }
+.portfolio > .container { padding: 0 var(--pad); }
+.portfolio .kicker { color: var(--bege); }
+.portfolio__topo { display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; flex-wrap: wrap; margin-bottom: clamp(20px, 4vw, 50px); }
+
+.filtros { display: flex; flex-wrap: wrap; gap: 6px; padding: 6px; border: 1px solid rgba(255,237,197,.25); border-radius: 999px; }
+.filtro { position: relative; padding: 9px 18px; border-radius: 999px; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; }
+.filtro__pill { position: absolute; inset: 0; background: var(--bege); border-radius: 999px; }
+.filtro__txt { position: relative; transition: color .3s; }
+.filtro.is-ativo .filtro__txt { color: var(--vinho); }

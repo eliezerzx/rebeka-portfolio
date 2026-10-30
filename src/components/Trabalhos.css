@@ -1,0 +1,4 @@
+.trabalhos-fotos { padding-left: 0; padding-right: 0; background: radial-gradient(90% 70% at 50% 0%, var(--vinho-claro), var(--vinho) 60%); }
+.trabalhos-fotos > .container { padding: 0 var(--pad); }
+.trabalhos-fotos__topo { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; margin-bottom: clamp(20px, 4vw, 50px); }
+.trabalhos-fotos__dica { font-family: var(--f-italico); font-style: italic; font-size: 18px; opacity: .7; }

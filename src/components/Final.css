@@ -1,0 +1,37 @@
+.depoimentos__topo { text-align: center; margin-bottom: clamp(50px, 7vw, 90px); }
+.depoimentos__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(18px, 2.4vw, 32px); }
+.depoimento { background: var(--branco); padding: clamp(26px, 3vw, 40px); box-shadow: 0 24px 50px rgba(61,11,22,.12); display: flex; flex-direction: column; gap: 22px; }
+.depoimento__estrelas { letter-spacing: .3em; color: var(--vinho-claro); font-size: 13px; }
+.depoimento blockquote { font-family: var(--f-italico); font-style: italic; font-size: clamp(22px, 2vw, 28px); line-height: 1.2; flex: 1; }
+.depoimento figcaption { display: flex; flex-direction: column; font-size: 12px; }
+.depoimento figcaption b { letter-spacing: .15em; text-transform: uppercase; }
+.depoimento figcaption span { opacity: .6; }
+
+.contato { position: relative; min-height: 100svh; overflow: hidden; display: grid; place-items: center; color: var(--bege); background: var(--vinho-escuro); }
+.contato__fundo { position: absolute; inset: 0; }
+.contato__fundo img { object-position: 50% 30%; }
+.contato__fundo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(36,5,12,.92), rgba(61,11,22,.75) 50%, rgba(36,5,12,.95)); }
+.contato__gigante {
+  position: absolute; top: 12%; left: 0; white-space: nowrap;
+  font-family: var(--f-titulo); text-transform: uppercase; font-size: clamp(90px, 16vw, 260px); line-height: 1;
+  color: transparent; -webkit-text-stroke: 1px rgba(255,237,197,.22);
+}
+.contato__gigante em { font-family: var(--f-italico); text-transform: none; font-weight: 400; }
+.contato__conteudo { position: relative; z-index: 1; text-align: center; padding: 140px var(--pad) 100px; }
+.contato__kicker { color: var(--bege); }
+.contato__acoes { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; margin-top: 46px; }
+
+.rodape { background: var(--vinho-escuro); color: var(--bege); padding: 70px var(--pad) 30px; border-top: 1px solid rgba(255,237,197,.12); }
+.rodape__grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; max-width: 1240px; margin: 0 auto; }
+.rodape__logo { font-family: var(--f-script); font-size: 56px; line-height: 1; display: block; margin-bottom: 14px; }
+.rodape p { font-size: 13px; opacity: .7; }
+.rodape nav, .rodape__contato { display: flex; flex-direction: column; gap: 8px; font-size: 13px; }
+.rodape nav a, .rodape__contato a { opacity: .75; transition: opacity .3s, transform .4s var(--ease); width: fit-content; }
+.rodape nav a:hover, .rodape__contato a:hover { opacity: 1; transform: translateX(6px); }
+.rodape__base { max-width: 1240px; margin: 60px auto 0; padding-top: 24px; border-top: 1px solid rgba(255,237,197,.12); display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; font-size: 11px; letter-spacing: .1em; opacity: .6; }
+
+@media (max-width: 860px) {
+  .depoimentos__grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+  .rodape__grid { grid-template-columns: 1fr 1fr; }
+  .rodape__grid > div:first-child { grid-column: 1 / -1; }
+}

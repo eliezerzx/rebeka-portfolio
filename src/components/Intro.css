@@ -1,0 +1,26 @@
+.intro { position: fixed; inset: 0; z-index: 200; pointer-events: none; }
+.intro__tarja { position: absolute; left: 0; right: 0; height: 50.5%; background: var(--vinho-escuro); }
+.intro__tarja--topo { top: 0; }
+.intro__tarja--base { bottom: 0; }
+.intro__conteudo { position: absolute; inset: 0; color: var(--bege); display: grid; place-items: center; }
+
+.intro__hud {
+  position: absolute; top: var(--pad); font-size: 12px; letter-spacing: .25em;
+  display: flex; align-items: center; gap: 10px;
+}
+.intro__hud--esq { left: var(--pad); }
+.intro__hud--dir { right: var(--pad); }
+.intro__rec { width: 10px; height: 10px; border-radius: 50%; background: #e0402f; animation: piscar 1s steps(2) infinite; }
+@keyframes piscar { 50% { opacity: 0; } }
+
+.intro__nome { text-align: center; }
+.intro__script { display: block; font-family: var(--f-script); font-size: clamp(72px, 13vw, 170px); line-height: 1.1; animation: entrarNome 1.4s cubic-bezier(.16,1,.3,1) both; }
+.intro__sub { display: block; font-size: 11px; letter-spacing: .35em; text-transform: uppercase; opacity: .7; animation: entrarNome 1.4s .25s cubic-bezier(.16,1,.3,1) both; }
+@keyframes entrarNome { from { opacity: 0; transform: translateY(24px); filter: blur(10px); } }
+
+.intro__timecode {
+  position: absolute; bottom: calc(var(--pad) + 18px); left: var(--pad);
+  font-size: 13px; letter-spacing: .2em; font-variant-numeric: tabular-nums;
+}
+.intro__barra { position: absolute; bottom: var(--pad); left: var(--pad); right: var(--pad); height: 1px; background: rgba(255,237,197,.2); }
+.intro__barra span { display: block; height: 100%; background: var(--bege); }

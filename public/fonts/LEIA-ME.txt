@@ -1,0 +1,1 @@
+Coloque aqui o arquivo Scholar-Italic.otf (ou .ttf/.woff2)
